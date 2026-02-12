@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-12-19T08:11:43.599248",
+  "mock_mode": true,
+  "phases": [
+    {
+      "phase_id": 1,
+      "phase_name": "Basic Connectivity",
+      "status": "failed",
+      "tests": [
+        {
+          "test_id": 1,
+          "test_name": "SSH to Switch #1",
+          "status": "passed",
+          "duration_s": 0.10502290725708008,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 2,
+          "test_name": "SSH to Switch #2",
+          "status": "passed",
+          "duration_s": 0.10264205932617188,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 3,
+          "test_name": "Load simple config (10\u00d710)",
+          "status": "passed",
+          "duration_s": 0.5056369304656982,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 4,
+          "test_name": "Send single packet",
+          "status": "passed",
+          "duration_s": 0.055084943771362305,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 5,
+          "test_name": "Read port counters",
+          "status": "passed",
+          "duration_s": 0.022227048873901367,
+          "error_message": null,
+          "measurements": {
+            "counter_count": 96
+          }
+        },
+        {
+          "test_id": 6,
+          "test_name": "Single-layer matmul (10\u00d710)",
+          "status": "failed",
+          "duration_s": 0.09278488159179688,
+          "error_message": "Output doesn't match expected",
+          "measurements": {
+            "accuracy": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

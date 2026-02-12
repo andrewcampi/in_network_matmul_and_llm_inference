@@ -1,0 +1,22 @@
+
+# Makefile for DPDK packet sender (DPDK 23.x)
+CC = gcc
+CFLAGS = -O3 -Wall -I/usr/include/dpdk
+LDFLAGS = -lpthread -lnuma
+
+# DPDK flags from pkg-config (provides all libraries)
+PKG_CONFIG_PATH ?= /usr/lib/x86_64-linux-gnu/pkgconfig
+CFLAGS += $(shell pkg-config --cflags libdpdk 2>/dev/null || echo "")
+LDFLAGS += $(shell pkg-config --libs libdpdk 2>/dev/null || echo "")
+
+TARGET = dpdk_packet_sender
+
+all: $(TARGET)
+
+$(TARGET): dpdk_packet_sender.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all clean

@@ -1,0 +1,167 @@
+{
+  "timestamp": "2025-12-19T08:16:24.815412",
+  "mock_mode": true,
+  "phases": [
+    {
+      "phase_id": 1,
+      "phase_name": "Basic Connectivity",
+      "status": "passed",
+      "tests": [
+        {
+          "test_id": 1,
+          "test_name": "SSH to Switch #1",
+          "status": "passed",
+          "duration_s": 0.10504794120788574,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 2,
+          "test_name": "SSH to Switch #2",
+          "status": "passed",
+          "duration_s": 0.1051030158996582,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 3,
+          "test_name": "Load simple config (10\u00d710)",
+          "status": "passed",
+          "duration_s": 0.5055952072143555,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 4,
+          "test_name": "Send single packet",
+          "status": "passed",
+          "duration_s": 0.05131196975708008,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 5,
+          "test_name": "Read port counters",
+          "status": "passed",
+          "duration_s": 0.020364046096801758,
+          "error_message": null,
+          "measurements": {
+            "counter_count": 96
+          }
+        },
+        {
+          "test_id": 6,
+          "test_name": "Single-layer matmul (10\u00d710)",
+          "status": "passed",
+          "duration_s": 0.08026790618896484,
+          "error_message": null,
+          "measurements": {
+            "accuracy": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "phase_id": 2,
+      "phase_name": "Multi-Layer Pipeline",
+      "status": "passed",
+      "tests": [
+        {
+          "test_id": 7,
+          "test_name": "VLAN progression (4 layers)",
+          "status": "passed",
+          "duration_s": 8.344650268554688e-06,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 8,
+          "test_name": "Packet recirculation",
+          "status": "passed",
+          "duration_s": 2.1457672119140625e-06,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 9,
+          "test_name": "Counter-free flow (4 layers)",
+          "status": "passed",
+          "duration_s": 0.07709884643554688,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 10,
+          "test_name": "Medium network (100\u00d7100)",
+          "status": "passed",
+          "duration_s": 0.5833699703216553,
+          "error_message": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "phase_id": 3,
+      "phase_name": "Full Scale Performance",
+      "status": "passed",
+      "tests": [
+        {
+          "test_id": 11,
+          "test_name": "Load full config (2,880\u00d72,880)",
+          "status": "passed",
+          "duration_s": 0.5050880908966064,
+          "error_message": null,
+          "measurements": {
+            "config_size_mb": 19
+          }
+        },
+        {
+          "test_id": 12,
+          "test_name": "Full 32-layer inference",
+          "status": "passed",
+          "duration_s": 0.07739496231079102,
+          "error_message": null,
+          "measurements": {}
+        },
+        {
+          "test_id": 13,
+          "test_name": "Latency measurement",
+          "status": "passed",
+          "duration_s": 0.10500121116638184,
+          "error_message": null,
+          "measurements": {
+            "latency_us": 394.9760429215236,
+            "target_us": 395.0,
+            "ratio": 0.9999393491684141
+          }
+        },
+        {
+          "test_id": 14,
+          "test_name": "Throughput (1,000 tokens)",
+          "status": "passed",
+          "duration_s": 0.0005507469177246094,
+          "error_message": null,
+          "measurements": {
+            "throughput_tps": 185506.59000442282,
+            "target_tps": 2527,
+            "ratio": 73.40981005319462,
+            "tokens_tested": 100
+          }
+        },
+        {
+          "test_id": 15,
+          "test_name": "Stress test (10,000 tokens)",
+          "status": "passed",
+          "duration_s": 0.0012259483337402344,
+          "error_message": null,
+          "measurements": {
+            "throughput_tps": 164224.90211433047,
+            "errors": 0,
+            "error_rate": 0.0,
+            "tokens_tested": 200
+          }
+        }
+      ]
+    }
+  ]
+}
